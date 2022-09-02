@@ -1,0 +1,35 @@
+.header {
+	padding: 26px 0 23px;
+	border-bottom: 1px solid #cfcfcf;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 20%;
+	}
+
+	&__icon-nav {
+		width: 20%;
+		display: flex;
+		justify-content: end;
+
+		a {
+			display: block;
+			@extend .transition-active;
+
+			&:hover {
+				svg {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+
+	.header__search {
+		margin-right: 26px;
+	}
+}

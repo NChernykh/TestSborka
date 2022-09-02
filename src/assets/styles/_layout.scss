@@ -1,0 +1,16 @@
+.wrapper {
+	position: relative;
+}
+
+.container {
+	max-width: 1640px;
+	margin: 0 auto;
+	padding: 0 30px;
+	box-sizing: content-box;
+}
+
+.content {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas: 'billing billing billing basket';
+}

@@ -1,0 +1,64 @@
+.progress {
+	position: relative;
+
+	progress {
+		position: absolute;
+		top: 10px;
+		display: flex;
+		width: 100%;
+		height: 1px;
+		background-color: #d5d5d5;
+		margin-bottom: 60px;
+		z-index: -1;
+
+		&::-webkit-progress-bar {
+			background-color: #d5d5d5;
+		}
+		&::-webkit-progress-value {
+			background-color: #3366ff;
+		}
+		&::-moz-progress-bar {
+			background-color: #d5d5d5;
+		}
+	}
+
+	&__legend {
+		display: flex;
+		margin: 0 -25px;
+		justify-content: space-between;
+
+		p {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-size: 14px;
+			line-height: 120%;
+		}
+	}
+
+	&__step {
+		border: 1px solid #d5d5d5;
+		@include br(50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 18px;
+		vertical-align: middle;
+		height: 18px;
+		margin-bottom: 9px;
+		background-color: white;
+		color: #d5d5d5;
+		font-size: 10px;
+		line-height: 15px;
+	}
+
+	.done {
+		background-color: #3366ff;
+		color: white;
+	}
+
+	.current {
+		border-color: #3366ff;
+		color: black;
+	}
+}

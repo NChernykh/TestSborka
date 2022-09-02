@@ -1,0 +1,28 @@
+<div class="header">
+	<div class="container">
+		<a class="header__logo">
+			{{ icon({
+				iconName: 'logo',
+				className: 'icon',
+				attributes: 'viewBox="0 0 89 32" style="width: 89px; height: 32px; fill: #212121;"'
+			}) }}
+		</a>
+		{{ menu() }}
+		<div class="header__icon-nav">
+			<a href="#" class="header__search">
+				{{ icon({
+					iconName: 'search',
+					className: 'icon',
+					attributes: 'viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #212121;"'
+				}) }}
+			</a>
+			<a href="#" class="header__cart">
+				{{ icon({
+					iconName: 'cart',
+					className: 'icon',
+					attributes: 'viewBox="0 0 30 27" style="width: 30px; height: 27px;"'
+				}) }}
+			</a>	
+		</div>
+	</div>
+</div>

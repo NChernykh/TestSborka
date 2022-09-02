@@ -1,0 +1,22 @@
+<div class="progress">
+    <div class="progress__legend">
+        <p>
+            <span class="progress__step done">1</span>
+            <span>Account</span>
+        </p>
+        <p>
+            <span class="progress__step done">2</span>
+            <span>Shipping</span>
+        </p>
+        <p>
+            <span class="progress__step current">3</span>
+            <span>Billing</span>
+        </p>
+        <p>
+            <span class="progress__step">4</span>
+            <span>Review</span>
+        </p>
+    </div>
+    <label for="order-progress"></label>
+    <progress id="order-progress" max="4" value="2.7"></progress>
+</div>

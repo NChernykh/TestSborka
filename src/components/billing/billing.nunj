@@ -1,0 +1,6 @@
+<section class="billing">
+    <div class="container">
+        {% include '../../components/progress/progress.nunj' %}
+
+    </div>    
+</section>
