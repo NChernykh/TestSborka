@@ -2,9 +2,138 @@
 	padding-top: 60px;
 	grid-area: billing;
 	border-right: 1px solid #d5d5d5;
+	height: calc(100vh - var(--header-height) - 60px);
 
 	.container {
 		margin: 0 auto;
 		padding: 0 63px;
+	}
+
+	&__title {
+		margin-bottom: 43px;
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	&__form {
+		width: 630px;
+		margin: 0 auto;
+	}
+
+	.payment-form {
+		&__radio {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin-bottom: 44px;
+
+			label {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				cursor: pointer;
+
+				svg {
+					display: block;
+					width: 85px;
+					height: 85px;
+					object-fit: cover;
+				}
+			}
+
+			input {
+				margin-right: 9px;
+				transition: opacity $default-transition-duration $default-transition-function;
+				cursor: pointer;
+				width: 18px;
+				height: 18px;
+				order: -1;
+
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}
+
+		&__radio-field:not(:last-child) {
+			margin-right: 82px;
+		}
+
+		&__card {
+			transform: translateX(-30px);
+			display: flex;
+			flex-wrap: wrap;
+			width: 490px;
+			padding: 20px 30px 44px;
+			background: #ffffff;
+			border: 1px solid #cfcfcf;
+			box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+			label {
+				span {
+					display: block;
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 24px;
+					color: #555770;
+					order: -1;
+				}
+			}
+
+			input {
+				padding: 8px 10px;
+				background-color: #ededf1;
+				border-radius: 3px;
+				border: none;
+				outline: none;
+
+				&:hover {
+					background-color: rgb(237, 237, 241, 0.5);
+				}
+			}
+		}
+
+		&__card-field {
+			width: 100%;
+			margin-bottom: 20px;
+
+			input {
+				width: 100%;
+
+				&::placeholder {
+					color: #8e90a6;
+					font-size: 14px;
+					line-height: 24px;
+				}
+			}
+		}
+
+		&__card-number {
+			margin-bottom: 20px;
+
+			label {
+				span {
+					display: block;
+				}
+			}
+			input {
+				width: 100px;
+				margin-right: 26px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&__card-sm {
+			width: 100px;
+			margin-right: 26px;
+
+			input {
+				width: 100%;
+			}
+		}
 	}
 }

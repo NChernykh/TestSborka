@@ -18,5 +18,5 @@
         </p>
     </div>
     <label for="order-progress"></label>
-    <progress id="order-progress" max="4" value="2.7"></progress>
+    <progress id="order-progress" max="3" value="2"></progress>
 </div>

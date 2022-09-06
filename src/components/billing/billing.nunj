@@ -1,6 +1,67 @@
 <section class="billing">
     <div class="container">
         {% include '../../components/progress/progress.nunj' %}
-
+        <div class="billing__form">
+            <form class="payment-form" action="#" method="POST">
+                <h2 class="payment-form__title">Billing Information</h2>
+                <div class="payment-form__radio">
+                    {{ input({
+                    className: "payment-form__radio-field",
+					type: "radio",
+					name: "methodPayment",
+					value: "creditCard",
+					label: "Pay with Credit Card",
+					checked: 'checked'
+                    }) }}
+                    {{ input({
+                        className: "payment-form__radio-field",
+                        type: "radio",
+                        name: "methodPayment",
+                        value: "payPal",
+                        icon: {
+                            iconName: "payPal",
+					        attributes: 'viewBox="0 0 85 23" style="width: 85px; height: 23px;"'
+                        }
+                    }) }}
+                </div>
+                <div class="payment-form__card">
+                    {{ input({
+                    className: "payment-form__card-field",
+					type: "text",
+					name: "cardHolder",
+                    id: "cardHolder",
+                    placeholder: "Placeholder Text",
+					label: "Name on card"
+                    }) }}
+                    <div class="payment-form__card-number">
+                        <label>
+                            <span>Card number</span>
+                            <input type="number" autocomplete="off">
+                            <input type="number" autocomplete="off">
+                            <input type="number" autocomplete="off">
+                            <input type="number" autocomplete="off">
+                        </label>						
+					</div>
+                        {{ input({
+                            className: "payment-form__card-sm",
+                            type: "text",
+                            name: "expireDate",
+                            id: "expireDate",
+                            pattern:"\d*",
+                            inputmode:"numeric",
+                            label: "Exrire date"
+                        }) }}
+                        {{ input({
+                            className: "payment-form__card-sm",
+                            type: "text",
+                            name: "cvv",
+                            id: "cvv",
+                            pattern:"\d*",
+                            inputmode:"numeric",
+                            label: "CVV code"
+                        }) }}
+                </div>
+            </form>
+        </div>
     </div>    
 </section>

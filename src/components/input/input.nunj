@@ -1,0 +1,29 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
+{% macro input(props) %}
+    <div class="{% if props.className %} {{ props.className }}{% endif %}">
+        <label {% if props.labelName %} class="{{ props.labelName }}"{% endif %}>
+            {% if props.label%}
+                <span> {{props.label}}</span>
+            {% endif %}  
+            <input
+                type="{{props.type}}", 
+                {% if props.name %}name="{{props.name}}"{% endif %}, 
+                {% if props.value %}value="{{props.value}}"{% endif %}, 
+                {% if props.id %}id="{{props.id}}"{% endif %}, 
+                {% if props.placeholder %}placeholder="{{props.placeholder}}"{% endif %},
+                {% if props.minlength %}minlength="{{props.minlength}}"{% endif %},
+                {% if props.maxlength %}maxlength="{{props.maxlength}}"{% endif %},
+                {% if props.pattern %}pattern="{{props.pattern}}"{% endif %},
+                {% if props.inputmode %}inputmode="{{props.inputmode}}"{% endif %},
+                {% if props.checked %}{{props.checked}}{% endif %}>
+            {% if props.icon %}
+                {{ icon({
+                    iconName: props.icon.iconName,
+                    className: props.icon.className,
+                    attributes: props.icon.attributes
+                }) }}
+            {% endif %}    
+        </label>    
+    </div>
+{% endmacro %}
