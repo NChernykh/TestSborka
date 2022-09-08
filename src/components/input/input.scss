@@ -1,0 +1,51 @@
+.custom-input {
+	-webkit-appearance: none;
+	appearance: none;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	clip: rect(0 0 0 0);
+
+	&:checked + label::after {
+		width: 8px;
+		height: 8px;
+		top: 6px;
+		left: 6px;
+		background-color: #3366ff;
+	}
+}
+
+.custom-label {
+	display: flex;
+	width: 100%;
+	display: block;
+	position: relative;
+	padding-left: 33px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: left;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 18px;
+		height: 18px;
+		border: 1px solid #cfcfcf;
+		transition: border-color $default-transition-duration $default-transition-function;
+
+		cursor: pointer;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+	}
+
+	&:hover::before {
+		border-color: black;
+	}
+}

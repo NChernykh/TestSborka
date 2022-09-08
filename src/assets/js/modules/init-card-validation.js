@@ -6,11 +6,12 @@ const initCardValidation = () => {
 		numbers: document.querySelectorAll('.payment-form__card-number input'),
 		holder: document.querySelector('#cardHolder'),
 		expire: document.querySelector('#expireDate'),
+		cvv: document.querySelector('#cvv'),
 	};
 	let numberI = 0;
 
 	// cardHolder
-	card.holder.addEventListener('input', e => {
+	card.holder.addEventListener('input', () => {
 		const regName = /\D/;
 		let holderValue = '';
 		const holderName = card.holder.value.substr(0, 40);
@@ -24,12 +25,11 @@ const initCardValidation = () => {
 
 	// номер карты
 	card.numbers.forEach(item => {
-		item.addEventListener('focus', e => {
-			e.preventDefault();
+		item.addEventListener('focus', () => {
 			card.numbers[numberI].focus();
 		});
-		item.addEventListener('input', e => {
-			if (/\d/.test(item.value)) {
+		item.addEventListener('input', () => {
+			if (item.value) {
 				if (item.value.length >= 4) {
 					item.value = item.value.substr(0, 4);
 					numberI = numberI < 3 ? numberI + 1 : numberI;
@@ -56,6 +56,35 @@ const initCardValidation = () => {
 			}
 		}
 	};
+
+	// expire Date
+	card.expire.addEventListener('input', () => {
+		let expireValue = '';
+		const reg = /^(\d{0,2})\/?(\d{0,2})$/;
+		const value = card.expire.value.substr(0, 5);
+		if (reg.test(value)) {
+			card.expire.value = value;
+			expireValue = value;
+			card.expire.classList.remove('invalid');
+		} else {
+			card.expire.value = expireValue;
+			card.expire.classList.add('invalid');
+		}
+	});
+
+	// cvv code
+
+	card.cvv.addEventListener('input', () => {
+		if (card.cvv.value) {
+			if (card.cvv.value.length >= 3) {
+				card.cvv.value = card.cvv.value.substr(0, 3);
+				card.cvv.classList.remove('invalid');
+			}
+		} else {
+			card.cvv.value = '';
+			card.cvv.classList.add('invalid');
+		}
+	});
 };
 
 export default initCardValidation;

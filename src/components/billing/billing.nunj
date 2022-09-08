@@ -7,17 +7,25 @@
                 <div class="payment-form__radio">
                     {{ input({
                     className: "payment-form__radio-field",
+                    inputClass: "custom-input",
 					type: "radio",
 					name: "methodPayment",
+                    id: "creditCard",
+                    for: "creditCard",
 					value: "creditCard",
 					label: "Pay with Credit Card",
+                    labelName: "custom-label",
 					checked: 'checked'
                     }) }}
                     {{ input({
                         className: "payment-form__radio-field",
+                        inputClass: "custom-input",
                         type: "radio",
                         name: "methodPayment",
                         value: "payPal",
+                        id: "payPal",
+                        for: "payPal",
+                        labelName: "custom-label",
                         icon: {
                             iconName: "payPal",
 					        attributes: 'viewBox="0 0 85 23" style="width: 85px; height: 23px;"'
@@ -42,25 +50,52 @@
                             <input type="number" autocomplete="off">
                         </label>						
 					</div>
-                        {{ input({
-                            className: "payment-form__card-sm",
-                            type: "text",
-                            name: "expireDate",
-                            id: "expireDate",
-                            pattern:"\d*",
-                            inputmode:"numeric",
-                            label: "Exrire date"
-                        }) }}
-                        {{ input({
-                            className: "payment-form__card-sm",
-                            type: "text",
-                            name: "cvv",
-                            id: "cvv",
-                            pattern:"\d*",
-                            inputmode:"numeric",
-                            label: "CVV code"
-                        }) }}
+                    {{ input({
+                        className: "payment-form__card-sm",
+                        type: "text",
+                        name: "expireDate",
+                        id: "expireDate",
+                        label: "Exrire date"
+                    }) }}
+                    {{ input({
+                        className: "payment-form__card-sm",
+                        type: "number",
+                        name: "cvv",
+                        id: "cvv",
+                        label: "CVV code"
+                    }) }}
                 </div>
+                <div class="payment-form__checkbox">
+                    {{ input({
+                        className: "payment-form__checkbox-field",
+                        inputClass: "custom-input",
+                        type: "checkbox",
+                        name: "saveCard",
+                        id: "saveCard",
+                        value: "saveCard",
+                        label: "Save information of this credit card",
+                        labelName: "custom-label",
+                        for: "saveCard",
+                        checked: 'checked'
+                    }) }}
+                    <div class="payment-form__checkbox-field">
+                        <input class="custom-input" type="checkbox" id="acception" name="acception" value="acception">
+                        <label for="acception" class="custom-label">
+                            <span>I accept the <a class="link" href="#">terms and conditions</a> and the <a class="link" href="#">Privacy Policies</a></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="payment-form__buttons">
+					{{ button({
+						type: 'button',
+						children: 'Back'
+					}) }}
+					{{ button({
+						className: 'button--blue',
+						type: 'submit',
+						children: 'Check Out'
+					}) }}
+			    </div>
             </form>
         </div>
     </div>    

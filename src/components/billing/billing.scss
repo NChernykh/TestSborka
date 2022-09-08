@@ -9,29 +9,34 @@
 		padding: 0 63px;
 	}
 
-	&__title {
-		margin-bottom: 43px;
-		font-weight: 700;
-		font-size: 18px;
-	}
-
 	&__form {
 		width: 630px;
 		margin: 0 auto;
 	}
 
 	.payment-form {
+		&__title {
+			margin-bottom: 43px;
+			font-weight: 700;
+			font-size: 18px;
+		}
+
 		&__radio {
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
 			margin-bottom: 44px;
+		}
 
-			label {
-				display: flex;
-				align-items: center;
-				justify-content: flex-start;
-				cursor: pointer;
+		&__radio-field {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+
+			.custom-label {
+				&::before {
+					border-radius: 50%;
+				}
 
 				svg {
 					display: block;
@@ -41,22 +46,37 @@
 				}
 			}
 
-			input {
-				margin-right: 9px;
-				transition: opacity $default-transition-duration $default-transition-function;
-				cursor: pointer;
-				width: 18px;
-				height: 18px;
-				order: -1;
-
-				&:hover {
-					opacity: 0.5;
+			.custom-input {
+				&:checked + .custom-label::after {
+					border-radius: 50%;
 				}
 			}
 		}
 
 		&__radio-field:not(:last-child) {
 			margin-right: 82px;
+		}
+
+		&__checkbox {
+			margin-bottom: 44px;
+		}
+
+		&__checkbox-field {
+			margin-bottom: 14px;
+
+			.custom-label {
+				color: #8c8c8c;
+			}
+
+			.link {
+				text-decoration: none;
+				@extend .transition-active;
+				color: black;
+
+				&:hover {
+					color: rgba(#000, 0.5);
+				}
+			}
 		}
 
 		&__card {
@@ -69,6 +89,7 @@
 			border: 1px solid #cfcfcf;
 			box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
 			border-radius: 5px;
+			margin-bottom: 40px;
 
 			label {
 				span {
@@ -85,12 +106,16 @@
 				padding: 8px 10px;
 				background-color: #ededf1;
 				border-radius: 3px;
-				border: none;
+				border: 1px solid transparent;
 				outline: none;
 
 				&:hover {
 					background-color: rgb(237, 237, 241, 0.5);
 				}
+			}
+
+			input.invalid {
+				border-color: red;
 			}
 		}
 
@@ -133,6 +158,20 @@
 
 			input {
 				width: 100%;
+			}
+		}
+
+		&__buttons {
+			display: flex;
+			justify-content: space-between;
+
+			.button--blue {
+				background-color: #3366ff;
+				color: white;
+
+				&:hover {
+					opacity: 0.7;
+				}
 			}
 		}
 	}
