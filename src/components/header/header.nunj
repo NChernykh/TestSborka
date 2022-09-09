@@ -7,6 +7,16 @@
 				attributes: 'viewBox="0 0 89 32" style="width: 89px; height: 32px; fill: #212121;"'
 			}) }}
 		</a>
+		<button class="header__menu-toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+            {{ icon({
+				iconName: 'burger',
+				className: 'header__menu-open'
+			}) }}
+			{{ icon({
+				iconName: 'close',
+				className: 'header__menu-close'
+			}) }}
+		</button>
 		{{ menu() }}
 		<div class="header__icon-nav">
 			<a href="#" class="header__search">
@@ -23,6 +33,6 @@
 					attributes: 'viewBox="0 0 30 27" style="width: 30px; height: 27px;"'
 				}) }}
 			</a>	
-		</div>
+		</div>	
 	</div>
 </div>

@@ -64,6 +64,18 @@
                         id: "cvv",
                         label: "CVV code"
                     }) }}
+                    <div class="tooltip-trigger" data-tooltip>
+                        {{ icon({
+                            iconName: 'question'
+                        }) }}
+                    </div>    
+                    <div class="tooltip">
+                        <div class="tooltip__wrapper">
+                            <div class="tooltip__text">
+                                <p>Введите cvv</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="payment-form__checkbox">
                     {{ input({

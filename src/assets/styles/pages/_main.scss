@@ -2,4 +2,14 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-areas: 'billing billing billing basket';
+
+	@include max-screen($lg) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: 'billing billing basket';
+	}
+
+	@include max-screen($md) {
+		grid-template-columns: 1fr;
+		grid-template-areas: 'billing';
+	}
 }

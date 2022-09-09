@@ -1,8 +1,9 @@
 .billing {
-	padding-top: 60px;
+	padding-top: 57px;
 	grid-area: billing;
 	border-right: 1px solid #d5d5d5;
-	height: calc(100vh - var(--header-height) - 60px);
+	min-height: calc(100vh - var(--header-height) - 60px);
+	height: auto;
 
 	.container {
 		margin: 0 auto;
@@ -16,7 +17,7 @@
 
 	.payment-form {
 		&__title {
-			margin-bottom: 43px;
+			margin-bottom: 40px;
 			font-weight: 700;
 			font-size: 18px;
 		}
@@ -25,7 +26,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			margin-bottom: 44px;
+			margin-bottom: 40px;
 		}
 
 		&__radio-field {
@@ -54,11 +55,11 @@
 		}
 
 		&__radio-field:not(:last-child) {
-			margin-right: 82px;
+			margin-right: 83px;
 		}
 
 		&__checkbox {
-			margin-bottom: 44px;
+			margin-bottom: 43px;
 		}
 
 		&__checkbox-field {
@@ -80,6 +81,7 @@
 		}
 
 		&__card {
+			position: relative;
 			transform: translateX(-30px);
 			display: flex;
 			flex-wrap: wrap;
@@ -103,7 +105,7 @@
 			}
 
 			input {
-				padding: 8px 10px;
+				padding: 11px 10px;
 				background-color: #ededf1;
 				border-radius: 3px;
 				border: 1px solid transparent;
@@ -122,9 +124,12 @@
 		&__card-field {
 			width: 100%;
 			margin-bottom: 20px;
+			display: flex;
+			flex-direction: column;
 
 			input {
 				width: 100%;
+				order: 2;
 
 				&::placeholder {
 					color: #8e90a6;
@@ -154,16 +159,20 @@
 
 		&__card-sm {
 			width: 100px;
-			margin-right: 26px;
+			margin-right: 30px;
+			display: flex;
+			flex-direction: column;
 
 			input {
 				width: 100%;
+				order: 2;
 			}
 		}
 
 		&__buttons {
 			display: flex;
 			justify-content: space-between;
+			margin-bottom: 100px;
 
 			.button--blue {
 				background-color: #3366ff;

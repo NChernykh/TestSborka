@@ -10,8 +10,8 @@
 	&:checked + label::after {
 		width: 8px;
 		height: 8px;
-		top: 6px;
-		left: 6px;
+		top: 5px;
+		left: 5px;
 		background-color: #3366ff;
 	}
 }
@@ -21,7 +21,7 @@
 	width: 100%;
 	display: block;
 	position: relative;
-	padding-left: 33px;
+	padding-left: 27px;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 16px;
@@ -32,8 +32,8 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 18px;
-		height: 18px;
+		width: 16px;
+		height: 16px;
 		border: 1px solid #cfcfcf;
 		transition: border-color $default-transition-duration $default-transition-function;
 

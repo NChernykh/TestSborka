@@ -1,6 +1,8 @@
 .progress {
 	position: relative;
+	margin: 0 auto;
 	margin-bottom: 60px;
+	width: 95%;
 
 	progress {
 		position: absolute;
@@ -43,12 +45,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 18px;
+		width: 16px;
 		vertical-align: middle;
-		height: 18px;
+		height: 16px;
 		margin-bottom: 9px;
 		background-color: white;
 		color: #d5d5d5;
+		font-weight: 500;
 		font-size: 10px;
 		line-height: 15px;
 	}
