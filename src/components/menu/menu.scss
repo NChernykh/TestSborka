@@ -6,12 +6,12 @@
 	padding-left: 30px;
 
 	&__item {
-		@extend .transition-active;
+		transition: opacity $default-transition-duration $default-transition-function;
 		margin-right: 30px;
 		text-decoration: none;
 
 		&:hover {
-			color: rgba(#000, 0.5);
+			opacity: 0.5;
 		}
 	}
 

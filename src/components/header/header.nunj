@@ -30,8 +30,9 @@
 				{{ icon({
 					iconName: 'cart',
 					className: 'icon',
-					attributes: 'viewBox="0 0 30 27" style="width: 30px; height: 27px;"'
+					attributes: 'viewBox="0 0 24 21" style="width: 24px; height: 21px;"'
 				}) }}
+				<span id="totalItem">2</span>
 			</a>	
 		</div>	
 	</div>

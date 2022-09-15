@@ -1,0 +1,73 @@
+<section class="basket">
+    <div class="basket__wrapper">
+        <h2 class="basket__title">My basket</h2>
+        <ul class="basket__list">
+            {% for item in basketItems %}
+                <li class="basket__item">
+                    <div class="basket__img">
+                        <img src={% inline item.img %} alt="{{ item.alt }}" />
+                    </div> 
+                    <div class="basket__content">
+                        <a href="{{ item.path }}" class="link basket__item-title">{{ item.title }}</a>
+                        <div class="basket__count">
+                            {{ button({
+                                type: 'button',
+                                className: 'basket__minus',
+                                data: 'data-counter="minus"'
+                            }) }}
+                            <input type="number" class="basket__input" min="1" max="100" value="1" data-counter="input">
+                            {{ button({
+                                type: 'button',
+                                className: 'basket__plus',
+                                data: 'data-counter="plus"'
+                            }) }}
+                            <p class="basket__price">$
+                                <span data-counter="price" data-value="{{ item.price }}">{{ item.price }}</span>
+                            </p>
+                        </div>
+                    </div> 
+                    {{ button({
+                        type: 'button',
+                        className: 'basket__delete',
+                        data: 'data-counter="delete" aria-label="Удалить"'
+                    }) }}   
+                </li>
+            {% endfor %}    
+        </ul> 
+    </div>      
+    <div class="basket__wrapper">
+        <h2 class="basket__title">Promo code</h2> 
+        <div class="basket__promo">
+            {{ input({
+                className: "basket__promo-input",
+                type: "text",
+                name: "promoCode",
+                id: "promoCode",
+                placeholder: "Placeholder Text"
+            }) }}
+            {{ button({
+                className: 'button--blue',
+                type: 'button',
+                children: 'Apply'
+            }) }}
+        </div>    
+    </div>
+    <div class="basket__total">
+        <div class="basket__total-inner">
+            <span>Subtotal</span>
+            <span>$<span id="subtotal">1 050</span></span>
+        </div>
+        <div class="basket__total-inner">
+            <span>Tax</span>
+            <span>$<span id="tax">100</span></span>
+        </div>
+        <div class="basket__total-inner">
+            <span>Shipping</span>
+            <span>$<span id="shipping">150</span></span>
+        </div>
+        <div class="basket__total-inner">
+            <span><b>Total</b></span>
+            <span>$<span id="total"><b>1 300</b></span></span>
+        </div>
+    </div>
+</section>    

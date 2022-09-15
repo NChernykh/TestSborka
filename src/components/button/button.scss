@@ -3,24 +3,24 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid #cfcfcf;
+	border: 1px solid $color-very-light-grey;
 	font-weight: 400;
 	cursor: pointer;
 	font-size: 14px;
 	line-height: 16px;
 	padding: 11px 30px;
-	background-color: white;
+	background-color: $color-white;
 	border-radius: 3px;
 
 	&:hover {
-		background-color: #cfcfcf;
-		color: rgba(#000, 0.8);
+		background-color: $color-very-light-grey;
+		color: rgba($color-black, 0.8);
 		transition: none;
 	}
 
 	&:active {
-		background-color: rgba(#000, 0.25);
-		border-color: rgba(#000, 0.25);
+		background-color: rgba($color-black, 0.25);
+		border-color: rgba($color-black, 0.25);
 
 		.button__chevron-right {
 			transform: translateX(1px);
@@ -32,5 +32,18 @@
 		margin-left: 5px;
 		transition: transform 0.1s ease-out,
 			fill $default-transition-duration $default-transition-function;
+	}
+}
+
+.button--blue {
+	background-color: $color-royal-blue;
+	color: $color-white;
+
+	@media (hover: hover), screen and (min-width: 0\0) {
+		&:hover,
+		&:focus {
+			background-color: $color-cerulean-blue;
+			color: rgba($color-white, 0.8);
+		}
 	}
 }

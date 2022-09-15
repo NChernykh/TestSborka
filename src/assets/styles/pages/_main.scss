@@ -4,12 +4,25 @@
 	grid-template-areas: 'billing billing billing basket';
 
 	@include max-screen($lg) {
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-areas: 'billing billing basket';
+		grid-template-columns: auto 410px;
+		grid-template-areas: 'billing basket';
 	}
 
 	@include max-screen($md) {
 		grid-template-columns: 1fr;
 		grid-template-areas: 'billing';
+	}
+}
+
+.link {
+	text-decoration: none;
+	@extend .transition-active;
+	color: black;
+
+	@media (hover: hover), screen and (min-width: 0\0) {
+		&:hover,
+		&:focus {
+			color: rgba(#000, 0.5);
+		}
 	}
 }

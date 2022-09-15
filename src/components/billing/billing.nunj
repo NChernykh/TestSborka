@@ -42,20 +42,18 @@
 					label: "Name on card"
                     }) }}
                     <div class="payment-form__card-number">
-                        <label>
-                            <span>Card number</span>
-                            <input type="number" autocomplete="off">
-                            <input type="number" autocomplete="off">
-                            <input type="number" autocomplete="off">
-                            <input type="number" autocomplete="off">
-                        </label>						
+                        <span>Card number</span>
+                        <input type="number" autocomplete="off">
+                        <input type="number" autocomplete="off">
+                        <input type="number" autocomplete="off">
+                        <input type="number" autocomplete="off">						
 					</div>
                     {{ input({
                         className: "payment-form__card-sm",
                         type: "text",
                         name: "expireDate",
                         id: "expireDate",
-                        label: "Exrire date"
+                        label: "Expire date"
                     }) }}
                     {{ input({
                         className: "payment-form__card-sm",

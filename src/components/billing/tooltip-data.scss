@@ -5,7 +5,7 @@
 	width: 13px;
 	height: 13px;
 	border-radius: 50%;
-	background-color: #dbdbdb;
+	background-color: $color-gainsboro;
 
 	svg {
 		position: absolute;
@@ -13,7 +13,7 @@
 		left: 4px;
 		width: 5px;
 		height: 9px;
-		color: black;
+		color: $color-black;
 	}
 }
 
@@ -28,9 +28,9 @@
 
 	padding: 5px;
 
-	color: black;
-	background-color: white;
-	box-shadow: 0 4px 20px #d5d5d5;
+	color: $color-black;
+	background-color: $color-white;
+	box-shadow: 0 4px 20px $color-light-grey;
 
 	&__wrapper {
 		position: relative;
@@ -45,10 +45,10 @@
 }
 
 [data-tooltip='tooltip-payment']:hover {
-	background-color: #3366ff;
+	background-color: $color-royal-blue;
 
 	svg {
-		color: white;
+		color: $color-white;
 	}
 }
 

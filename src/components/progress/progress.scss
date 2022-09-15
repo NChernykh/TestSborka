@@ -3,6 +3,7 @@
 	margin: 0 auto;
 	margin-bottom: 60px;
 	width: 95%;
+	max-width: 1100px;
 
 	progress {
 		position: absolute;
@@ -10,18 +11,18 @@
 		display: flex;
 		width: 100%;
 		height: 1px;
-		background-color: #d5d5d5;
+		background-color: $color-light-grey;
 		margin-bottom: 60px;
 		z-index: -1;
 
 		&::-webkit-progress-bar {
-			background-color: #d5d5d5;
+			background-color: $color-light-grey;
 		}
 		&::-webkit-progress-value {
-			background-color: #3366ff;
+			background-color: $color-royal-blue;
 		}
 		&::-moz-progress-bar {
-			background-color: #d5d5d5;
+			background-color: $color-light-grey;
 		}
 	}
 
@@ -40,7 +41,7 @@
 	}
 
 	&__step {
-		border: 1px solid #d5d5d5;
+		border: 1px solid $color-light-grey;
 		@include br(50%);
 		display: flex;
 		align-items: center;
@@ -49,20 +50,21 @@
 		vertical-align: middle;
 		height: 16px;
 		margin-bottom: 9px;
-		background-color: white;
-		color: #d5d5d5;
+		background-color: $color-white;
+		color: $color-light-grey;
 		font-weight: 500;
 		font-size: 10px;
 		line-height: 15px;
 	}
 
 	.done {
-		background-color: #3366ff;
+		background-color: $color-royal-blue;
+		border-color: $color-royal-blue;
 		color: white;
 	}
 
 	.current {
-		border-color: #3366ff;
-		color: black;
+		border-color: $color-royal-blue;
+		color: $color-black;
 	}
 }

@@ -1,7 +1,8 @@
 import { gsap } from 'gsap';
 import setHeaderHeight from './modules/set-header-height';
 import initCardValidation from './modules/init-card-validation';
-import initBurgerAction from './modules/toggle-burger';
+import initBurgerAction from './modules/init-toggle-burger';
+import initBasketWork from './modules/init-basket-work';
 
 // import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js';
 // gsap.registerPlugin(ScrollToPlugin);
@@ -27,6 +28,7 @@ class ProjectApp {
 			setHeaderHeight();
 			initCardValidation();
 			initBurgerAction();
+			initBasketWork();
 		});
 	}
 }

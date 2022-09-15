@@ -15,8 +15,8 @@ body {
 
 body {
 	font: normal 14px/1.2 $roboto-font;
-	color: #000;
-	background: #fff;
+	color: $color-black;
+	background: $color-white;
 	@include mobile {
 		-webkit-text-size-adjust: 100%;
 	}

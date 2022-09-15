@@ -25,6 +25,22 @@
 			"path": "#"
 		}
 	],
+	"basketItems": [
+		{
+			"img": "basket-prod-1.png",
+			"alt": "фото товара",
+			"path": "#",
+			"title": "Amet minim mollit non deserunt ullamco est sit",
+			"price": 525
+		},
+		{
+			"img": "basket-prod-2.png",
+			"alt": "фото товара",
+			"path": "#",
+			"title": "Amet minim mollit non",
+			"price": 525
+		}
+	],
 	"someData": [
 		{
 			"title": "Item 1",

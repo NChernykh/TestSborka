@@ -12,7 +12,7 @@
 		height: 8px;
 		top: 5px;
 		left: 5px;
-		background-color: #3366ff;
+		background-color: $color-royal-blue;
 	}
 }
 
@@ -26,6 +26,7 @@
 	font-size: 14px;
 	line-height: 16px;
 	text-align: left;
+	cursor: pointer;
 
 	&::before {
 		content: '';
@@ -34,7 +35,7 @@
 		left: 0;
 		width: 16px;
 		height: 16px;
-		border: 1px solid #cfcfcf;
+		border: 1px solid $color-very-light-grey;
 		transition: border-color $default-transition-duration $default-transition-function;
 
 		cursor: pointer;
@@ -46,6 +47,6 @@
 	}
 
 	&:hover::before {
-		border-color: black;
+		border-color: $color-black;
 	}
 }
